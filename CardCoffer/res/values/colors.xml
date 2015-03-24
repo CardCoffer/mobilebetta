@@ -7,5 +7,7 @@
     <color name="ali_green_pressed">#398439</color>
     <color name="ali_green_solid">#4DA34D</color>
     <color name="sidebar_gray">#222</color>
+    <color name="thumb_blue_color">#39A2F8</color>
+    <color name="mild_gray">#BFBDB8</color>
     
 </resources>

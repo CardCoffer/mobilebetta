@@ -1,20 +1,28 @@
 package com.cardcoffer.app;
 
+import com.cardcoffer.app.customviews.ItemCardThumbnail;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class HomeActivity extends Activity {
+	
+	
+	LinearLayout llCardContainer;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
+		
+		llCardContainer = (LinearLayout) findViewById(R.id.home_llCardContainer);
 		
 	}
 
@@ -37,6 +45,11 @@ public class HomeActivity extends Activity {
 		}
 		if (id == R.id.action_search){
 			
+			for(int i = 0; i<10; i++){
+				
+				llCardContainer.addView(new ItemCardThumbnail(this));
+				
+			}
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

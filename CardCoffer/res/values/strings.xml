@@ -50,5 +50,6 @@
     <string name="company">Company</string>
     <string name="country">Country</string>
     <string name="search">Search</string>
+    <string name="card_logo">card logo</string>
 
 </resources>
