@@ -5,6 +5,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:animateLayoutChanges="true"
+    android:background="@color/thumb_blue_color"
     android:orientation="vertical"
     android:scrollbarAlwaysDrawVerticalTrack="true" >
 
@@ -22,7 +23,6 @@
             android:id="@+id/home_llCardContainer"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            
             android:gravity="center"
             android:orientation="vertical" >
         </LinearLayout>
@@ -33,31 +33,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:gravity="center"
         android:orientation="horizontal" >
 
-        <Button
-            android:id="@+id/btnHome_CardFlip"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="bottom"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/ali_button"
-            android:gravity="center"
-            android:text="Flip" />
+        <ImageButton
+            android:id="@+id/btnHome_CheckIn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="@string/check_in_button"
+            android:src="@drawable/ic_action_place" />
 
-        <Button
-            android:id="@+id/btnHome_Exchange"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="bottom"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/ali_button"
-            android:gravity="center"
-            android:text="Exchange" />
+        <ImageButton
+            android:id="@+id/btnHome_CardCoffer"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="@string/show_cards"
+            android:scaleType="fitCenter"
+            android:src="@drawable/stackofcards" />
+
+        <ImageButton
+            android:id="@+id/btnHome_exchange"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="@string/exchange"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_action_upload" />
     </LinearLayout>
 
 </LinearLayout>

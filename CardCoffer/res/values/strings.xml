@@ -51,5 +51,8 @@
     <string name="country">Country</string>
     <string name="search">Search</string>
     <string name="card_logo">card logo</string>
+    <string name="check_in_button">check in button</string>
+    <string name="show_cards">show cards</string>
+    <string name="exchange">exchange</string>
 
 </resources>
