@@ -1,57 +1,28 @@
 package com.cardcoffer.app;
 
+import com.cardcoffer.app.customviews.ItemCardThumbnail;
+
 import android.animation.LayoutTransition;
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
-
-import com.cardcoffer.app.customviews.ItemCardThumbnail;
 
 /**
  * 
  * @author sinash
- *
+ * 
  */
-public class HomeActivity extends Activity {
 
-	LinearLayout llCardContainer;
-	ImageButton btnCardCoffer, btnCheckIn, btnExchange;
+public class CheckInActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_home);
 
-		llCardContainer = (LinearLayout) findViewById(R.id.home_llCardContainer);
-
-		btnCardCoffer = (ImageButton) findViewById(R.id.btnHome_cardCoffer);
-		btnCheckIn = (ImageButton) findViewById(R.id.btnHome_checkIn);
-		btnExchange = (ImageButton) findViewById(R.id.btnHome_exchange);
-		
-		btnCheckIn.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				
-				launchCheckInActivity();
-				
-			}
-		});
-
-	}
-
-	protected void launchCheckInActivity() {
-		
-		Intent intent = new Intent(this, CheckInActivity.class);
-		startActivity(intent);
-		
+		getActionBar().setTitle("Check In!");
 	}
 
 	@Override
@@ -72,14 +43,12 @@ public class HomeActivity extends Activity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-	
+
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
 			return true;
 		}
 		if (id == R.id.action_search) {
-
-			llCardContainer.addView(new ItemCardThumbnail(this));
 
 			return true;
 		}
