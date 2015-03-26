@@ -1,22 +1,28 @@
 package com.cardcoffer.app;
 
-import com.cardcoffer.app.customviews.ItemCardThumbnail;
-
 import android.animation.LayoutTransition;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
-import android.widget.EditText;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.SearchView;
-import android.widget.TextView;
 
+import com.cardcoffer.app.customviews.ItemCardThumbnail;
+
+/**
+ * 
+ * @author sinash
+ *
+ */
 public class HomeActivity extends Activity {
 
 	LinearLayout llCardContainer;
+	ImageButton btnCardCoffer, btnCheckIn, btnExchange;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +31,27 @@ public class HomeActivity extends Activity {
 
 		llCardContainer = (LinearLayout) findViewById(R.id.home_llCardContainer);
 
+		btnCardCoffer = (ImageButton) findViewById(R.id.btnHome_cardCoffer);
+		btnCheckIn = (ImageButton) findViewById(R.id.btnHome_checkIn);
+		btnExchange = (ImageButton) findViewById(R.id.btnHome_exchange);
+		
+		btnCheckIn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+				launchCheckInActivity();
+				
+			}
+		});
+
+	}
+
+	protected void launchCheckInActivity() {
+		
+		Intent intent = new Intent(this, CheckInActivity.class);
+		startActivity(intent);
+		
 	}
 
 	@Override
@@ -41,7 +68,8 @@ public class HomeActivity extends Activity {
 		// Get the search bar Linearlayout
 		LinearLayout searchBar = (LinearLayout) searchView.findViewById(searchBarId);
 		// Give the Linearlayout a transition animation.
-		searchBar.setLayoutTransition(new LayoutTransition()); //TODO set good animation!
+		searchBar.setLayoutTransition(new LayoutTransition()); // TODO set good
+																// animation!
 
 		return true;
 	}
@@ -57,11 +85,8 @@ public class HomeActivity extends Activity {
 		}
 		if (id == R.id.action_search) {
 
-			for (int i = 0; i < 10; i++) {
+			llCardContainer.addView(new ItemCardThumbnail(this));
 
-				llCardContainer.addView(new ItemCardThumbnail(this));
-
-			}
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
