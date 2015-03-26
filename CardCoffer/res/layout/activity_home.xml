@@ -23,7 +23,6 @@
             android:id="@+id/home_llCardContainer"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:gravity="center"
             android:orientation="vertical" >
         </LinearLayout>
     </ScrollView>
