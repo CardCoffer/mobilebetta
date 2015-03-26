@@ -54,5 +54,7 @@
     <string name="check_in_button">check in button</string>
     <string name="show_cards">show cards</string>
     <string name="exchange">exchange</string>
+    <string name="retrieve_location">Retrieve Location</string>
+    <string name="enter_location">Enter Location</string>
 
 </resources>
