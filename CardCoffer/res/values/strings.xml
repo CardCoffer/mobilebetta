@@ -56,5 +56,6 @@
     <string name="exchange">exchange</string>
     <string name="retrieve_location">Retrieve Location</string>
     <string name="enter_location">Enter Location</string>
+    <string name="add_new_stack">Add New Stack</string>
 
 </resources>

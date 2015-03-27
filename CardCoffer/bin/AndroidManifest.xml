@@ -51,6 +51,11 @@
         </activity>
         
         <activity
+            android:name="com.cardcoffer.app.activities.StacksActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        
+        <activity
             android:name="com.cardcoffer.app.activities.LoginActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:noHistory="true"

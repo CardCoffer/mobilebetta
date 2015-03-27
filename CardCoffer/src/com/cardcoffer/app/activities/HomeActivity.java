@@ -50,6 +50,15 @@ public class HomeActivity extends Activity {
 			}
 		});
 		
+		btnCardCoffer.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+				launchStacksActivity();
+				
+			}
+		});
 		
 		if(ParseUser.getCurrentUser() == null){
 			
@@ -57,6 +66,11 @@ public class HomeActivity extends Activity {
 			
 		}
 
+	}
+
+	protected void launchStacksActivity() {
+		Intent intent = new Intent(this, StacksActivity.class);
+		startActivity(intent);
 	}
 
 	private void launchLoginActivity() {
