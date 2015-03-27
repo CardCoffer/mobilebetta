@@ -44,9 +44,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name="com.cardcoffer.app.CheckInActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        
+        <activity
+            android:name="com.cardcoffer.app.LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Holo.NoActionBar" >
         </activity>
 
         <service android:name="com.parse.PushService" />

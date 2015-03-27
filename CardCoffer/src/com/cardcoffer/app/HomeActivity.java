@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.SearchView;
 
 import com.cardcoffer.app.customviews.ItemCardThumbnail;
+import com.parse.ParseUser;
 
 /**
  * 
@@ -44,7 +45,22 @@ public class HomeActivity extends Activity {
 				
 			}
 		});
+		
+		
+		if(ParseUser.getCurrentUser() == null){
+			
+			launchLoginActivity();
+			
+		}
 
+	}
+
+	private void launchLoginActivity() {
+		
+		Intent intent = new Intent(this, LoginActivity.class);
+		startActivity(intent);
+		finish();
+		
 	}
 
 	protected void launchCheckInActivity() {
