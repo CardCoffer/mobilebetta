@@ -1,4 +1,9 @@
-package com.cardcoffer.app;
+package com.cardcoffer.app.activities;
+
+import com.cardcoffer.app.R;
+import com.cardcoffer.app.R.id;
+import com.cardcoffer.app.R.layout;
+import com.cardcoffer.app.R.menu;
 
 import android.animation.LayoutTransition;
 import android.app.Activity;

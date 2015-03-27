@@ -1,8 +1,11 @@
 //TODO in landscape orientation, the logo doesn't show up completely.
 
-package com.cardcoffer.app;
+package com.cardcoffer.app.activities;
 
 import com.cardcoffer.app.R;
+import com.cardcoffer.app.R.id;
+import com.cardcoffer.app.R.layout;
+
 import android.accounts.AccountAuthenticatorActivity;
 import android.content.Intent;
 import android.os.Bundle;

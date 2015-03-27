@@ -13,6 +13,7 @@ import java.util.Map;
 import android.app.Application;
 import android.os.Build;
 
+import com.cardcoffer.app.activities.HomeActivity;
 import com.parse.Parse;
 import com.parse.ParseAnalytics;
 import com.parse.PushService;

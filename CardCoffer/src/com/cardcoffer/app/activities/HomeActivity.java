@@ -1,4 +1,4 @@
-package com.cardcoffer.app;
+package com.cardcoffer.app.activities;
 
 import android.animation.LayoutTransition;
 import android.app.Activity;
@@ -12,6 +12,10 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
 
+import com.cardcoffer.app.R;
+import com.cardcoffer.app.R.id;
+import com.cardcoffer.app.R.layout;
+import com.cardcoffer.app.R.menu;
 import com.cardcoffer.app.customviews.ItemCardThumbnail;
 import com.parse.ParseUser;
 
